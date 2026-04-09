@@ -26,7 +26,8 @@ if (workspaceIdRaw === undefined || workspaceIdRaw === '' || !Number.isFinite(wo
 const client = smartsheet.createClient({ accessToken: token });
 
 try {
-  const workspace = await client.workspaces.getWorkspaceMetadata({ workspaceId });
+  const workspace =
+    await client.workspaces.getWorkspaceMetadata({ workspaceId });
 
   console.log(
     `Workspace: ${workspace.name},`,
